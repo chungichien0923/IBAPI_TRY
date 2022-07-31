@@ -24,7 +24,7 @@ con = engine.connect()
 
 sqlQuery                    = f"SELECT * FROM {TableName}"
 
-data_sql = pd.read_sql(sqlQuery, con, parse_dates=["Date"])
+data_sql = pd.read_sql(sqlQuery, con, index_col='Date', parse_dates=["Date"])
 print(data_sql)
 # print(data_sql.info())
 
